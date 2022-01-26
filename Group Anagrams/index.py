@@ -1,6 +1,3 @@
-from unittest import result
-
-
 def groupAnagrams(strs):
     element_map = {}
     for string in strs:
@@ -9,7 +6,6 @@ def groupAnagrams(strs):
             element_map[sorted_string].append(string)
         else:
             element_map[sorted_string] = [string]
-    
     result = []
     for value in element_map.values():
         result.append(value)
@@ -17,4 +13,6 @@ def groupAnagrams(strs):
 
 strs = ["eat","tea","tan","ate","nat","bat"]
 strs1 = ["a"]
+strs2 = ["cab","tin","pew","duh","may","ill","buy","bar","max","doc"]
+print(groupAnagrams(strs2))
 print(groupAnagrams(strs))
